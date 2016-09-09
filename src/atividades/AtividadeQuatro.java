@@ -28,7 +28,10 @@ public class AtividadeQuatro {
 			}
 		} while (insere >= 0);
 		scan.close();
+                if (numero > 0) 
 		System.out.println("A média foi de " + (soma / numero) + " \nForam inseridos " + numero + " números");
+                else
+                    System.out.println("Não houve numeros inseridos");
 	}
 
 }
