@@ -24,6 +24,7 @@ public class Atividades {
     }
 
     public void Execucao() {
+        try{
         int opcao = Integer.parseInt(
                 JOptionPane.showInputDialog("Favor escolhar umas das atividades \n" 
                         + "Para Atividade Um -> 1 \n"
@@ -31,6 +32,7 @@ public class Atividades {
                         + "Para Atividade Tres -> 3 \n"
                         + "Para Atividade Quatro -> 4 \n"
                         + " Para Sair Digite -> 0"));
+        
         switch (opcao) {
             case 0:
                 System.out.printf("Programa ENCERRADO");
@@ -52,8 +54,12 @@ public class Atividades {
                 exec4.ValidaNumero();
                 break;
             default:
-                JOptionPane.showMessageDialog(null, "Número Invalido", "Inserção Equivocada", 1);
+                JOptionPane.showMessageDialog(null, "002 - Número Invalido", "Inserção Equivocada", 1);
                 Execucao();
         }
+        }catch(NumberFormatException e){
+                 JOptionPane.showMessageDialog(null, "001 - Digito Não Numerico", "Invalida", 1);
+                 Execucao();
+                }
     }
 }
