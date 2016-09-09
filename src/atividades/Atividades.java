@@ -35,7 +35,7 @@ public class Atividades {
 			break;
 		case 4:
 			AtividadeQuatro exec4 = new AtividadeQuatro();
-			exec4.ValidaNumero();
+			exec4.ValidaNumero();break;
 		default:
 			JOptionPane.showMessageDialog(null, "Número Invalido", "Número Invalido", 1 ); 
 		}
