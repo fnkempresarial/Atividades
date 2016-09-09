@@ -12,26 +12,28 @@ import java.util.Scanner;
  * @author Frank
  */
 public class AtividadeQuatro {
-    	double insere;
-	int numero;
-	double soma;
 
-	void ValidaNumero() {
-		Scanner scan = new Scanner(System.in);
-		do {
+    double insere;
+    int numero;
+    double soma;
 
-			System.out.println("Insira um numero Abaixo");
-			insere = scan.nextDouble();
-			if (insere >= 0) {
-				soma = soma + insere;
-				numero++;
-			}
-		} while (insere >= 0);
-		scan.close();
-                if (numero > 0) 
-		System.out.println("A média foi de " + (soma / numero) + " \nForam inseridos " + numero + " números");
-                else
-                    System.out.println("Não houve numeros inseridos");
-	}
+    void ValidaNumero() {
+        Scanner scan = new Scanner(System.in);
+        do {
+
+            System.out.println("Insira um numero Abaixo");
+            insere = scan.nextDouble();
+            if (insere >= 0) {
+                soma = soma + insere;
+                numero++;
+            }
+        } while (insere >= 0);
+        scan.close();
+        if (numero > 0) {
+            System.out.println("A média foi de " + (soma / numero) + " \nForam inseridos " + numero + " números");
+        } else {
+            System.out.println("Não houve numeros inseridos");
+        }
+    }
 
 }
