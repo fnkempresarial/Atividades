@@ -5,28 +5,28 @@
  */
 package atividades;
 
-import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Frank
  */
 public class AtividadeUm {
-
-    Scanner scan = new Scanner(System.in);
+  
 
     void Executa_Atividadeum() {
 
-        System.out.println("Insira a sua idade");
-        int idade = scan.nextInt();
+       int idade = Integer.parseInt(JOptionPane.showInputDialog("Insira a sua idade"));
+       
         if (idade < 16) {
-            System.out.println("Você não tem idade para votar");
+            JOptionPane.showMessageDialog(null,"Você não tem idade para votar","Reposta",2);
         }
         if (idade == 16 || idade == 17 || idade >= 65) {
-            System.out.println("Voto Facultativo");
+            JOptionPane.showMessageDialog(null,"Voto Facultativo","Reposta",2);
         }
         if (idade >= 18 && idade < 65) {
-            System.out.println("Você Obrigatorio");
+            JOptionPane.showMessageDialog(null,"Você Obrigatorio","Reposta",1);
         }
     }
 }
